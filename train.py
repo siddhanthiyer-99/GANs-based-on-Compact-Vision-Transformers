@@ -473,12 +473,22 @@ def main():
         _logger.info('Scheduled epochs: {}'.format(num_epochs))
 
     # create the train and eval datasets
-    dataset_train = create_dataset(
-        args.dataset,
-        root=args.data_dir, split=args.train_split, is_training=True,
-        batch_size=args.batch_size, repeats=args.epoch_repeats)
-    dataset_eval = create_dataset(
-        args.dataset, root=args.data_dir, split=args.val_split, is_training=False, batch_size=args.batch_size)
+    # dataset_train = create_dataset(
+    #     args.dataset,
+    #     root=args.data_dir, split=args.train_split, is_training=True,
+    #     batch_size=args.batch_size, repeats=args.epoch_repeats)
+    # dataset_eval = create_dataset(
+    #     args.dataset, root=args.data_dir, split=args.val_split, is_training=False, batch_size=args.batch_size)
+    
+    dataset_train = torchvision.datasets.CIFAR10(
+        root='./data', train=True, download=True)
+    trainloader = torch.utils.data.DataLoader(
+        dataset_train, batch_size=128, shuffle=True, num_workers=2)
+
+    dataset_eval = torchvision.datasets.CIFAR10(
+        root='./data', train=False, download=True)
+    testloader = torch.utils.data.DataLoader(
+        dataset_eval, batch_size=100, shuffle=False, num_workers=2)
 
     # setup mixup / cutmix
     collate_fn = None
