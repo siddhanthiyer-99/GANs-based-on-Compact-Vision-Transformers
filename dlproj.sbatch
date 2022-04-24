@@ -14,4 +14,4 @@ module purge
 module load anaconda3/2020.07
 eval "$(conda shell.bash hook)"
 conda activate dlproj
-python train.py -c configs/datasets/cifar10.yml --model cct_7_3x1_32 /data
+python train.py -c configs/datasets/cifar10.yml --model cct_7_3x1_32 /imagenet_data

@@ -480,13 +480,13 @@ def main():
     # dataset_eval = create_dataset(
     #     args.dataset, root=args.data_dir, split=args.val_split, is_training=False, batch_size=args.batch_size)
     
-    dataset_train = torchvision.datasets.CIFAR10(
-        root='./data', train=True, download=True)
+    dataset_train = torchvision.datasets.ImageNet(
+        root='./imagenet_data', train=True, download=True)
     trainloader = torch.utils.data.DataLoader(
         dataset_train, batch_size=128, shuffle=True, num_workers=2)
 
-    dataset_eval = torchvision.datasets.CIFAR10(
-        root='./data', train=False, download=True)
+    dataset_eval = torchvision.datasets.ImageNet(
+        root='./imagenet_data', train=False, download=True)
     testloader = torch.utils.data.DataLoader(
         dataset_eval, batch_size=100, shuffle=False, num_workers=2)
 
