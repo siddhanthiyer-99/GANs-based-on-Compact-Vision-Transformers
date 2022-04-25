@@ -1,19 +1,9 @@
-<h1>Implementations of ResNet architecture on CIFAR10 with less than 5M Parameters – Deep Learning Mini Project 1</h1>
+<h1>GANs based on Compact Vision Transformers</h1>
 
-<h3> <u> OUR ARCHITECTURE: </u> </h3>
+<h3> <u> OVERVIEW: </u> </h3>
 
-![architecture](https://user-images.githubusercontent.com/47019139/160049019-05f6d487-c9c3-4116-b435-36c512c0a7b1.PNG)
+![architecture]![image](https://user-images.githubusercontent.com/47019139/165015370-92c33f6a-f458-4e96-844d-afb9406de9f7.png)
 
-Here,
-<ul>
-  
-<li>N: # Residual Layers = 3
-<li>Bi: # Residual blocks in Residual Layer i = 2
-<li>Ci: # channels in Residual Layer i = 64
-<li>Fi: Conv. kernel size in Residual Layer i = 3 x 3
-<li>Ki: Skip connection kernel size in Residual Layer i = 1 x 1
-<li>P: Average pool kernel size = 8 x 8
-</ul>
 
 -------------------------------------------------------------------------------------------------------- 
 <h3> ABOUT THE REPO: </h3>
