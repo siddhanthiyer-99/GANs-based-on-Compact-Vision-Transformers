@@ -2,60 +2,49 @@
 
 <h3> <u> OVERVIEW: </u> </h3>
 
-![image](https://user-images.githubusercontent.com/47019139/165015442-25e24a9e-3b79-4f2e-b5a2-82bf213af4be.png)
+![image](https://user-images.githubusercontent.com/47019139/165015471-1932b983-33e0-4696-ae9a-93eae9107276.png)
 
-![image](https://user-images.githubusercontent.com/47019139/165015370-92c33f6a-f458-4e96-844d-afb9406de9f7.png)
-
+![image](https://user-images.githubusercontent.com/47019139/165015480-37f19579-1c6e-4683-92c6-a730054aadcf.png)
 
 -------------------------------------------------------------------------------------------------------- 
 <h3> ABOUT THE REPO: </h3>
 <h3> 1. File structure </h3>
-OUTPUTS – This folder contains all the outputs in ‘.out’ format, of the different experiments with different parameters. To view contents of the folder, use the “cat” command. <br><br>
-PLOTS – This folder contains all the different graphs plotted for each corresponding experiment. They contain .png files and can be opened on Github itself. <br><br>
-SBATCH – This folder contains all the different ‘.sbatch’ files created for each corresponding experiment. They are used to assign Slurm jobs, use the command “sbatch filename.sbatch” to run the particular experiment. <br><br>
-best_model.out – This is the output file generated for our model which produced the best results. <br><br>
-best_model_acc.png & best_model_loss.png – These are the train/test accuracy graph and loss graph for our model. 
-bestmodel.sbatch – The sbatch for this model is bestmodel.sbatch. <br><br>
-main.py – Python file being ran by the slurm command which contains our training logic and saves the best model weights in project1_model.pt file. <br><br>
-project1_model.pt – This is a PyTorch file for our best architecture with saved parameters that can be loaded for testing. <br><br>
-requirements.txt – This file contains all the different libraries used for this project. <br><br>
-test.py – Python program to run the model saved in project1_model.pt on CIFAR10 testset. <br><br>
-utils.py – Python program which is being used by ‘main.py’ to import different functionalities such as Progress bar and computing the mean and standard deviation value of dataset. <br><br>
+CONFIGS – This folder contains helper codes. <br><br>
+MODELS – This folder contains different models which are required for training. <br><br>
+OUTPUT/TRAIN – This folder contains results of CCT on CIFAR-10 and CIFAR-100. <br><br>
+PLOTS – This folder contains plots for train/test loss and accuracy. <br><br>
+SRC – This folder contains necessary codes for CVT, CCT and ViTs. <br><br>
+UTILS – This folder contains various miscellanous code files. <br><br>
+VITGAN.sbatch – sbatch file for running experiment for ViTGAN <br><br>
+cifar10.sbatch – sbatch file for running CCT/CVT experiment on CIFAR-10 dataset. <br><br>
+cifar100.sbatch – sbatch file for running CCT/CVT experiment on CIFAR-100 dataset. <br><br>
+main.py – This python file contains the code being called in SLURM jobs. <br><br>
+requirements.txt - This text file contains all the dependencies for the CONDA environment. <br><br>
+train.py – This python file contains the code for training the model. <br><br>
 
 -------------------------------------------------------------------------------------------------------- 
 <h3> 2. How to clone </h3>
 (Make sure you have Git Bash installed)
 Run a Git Bash terminal in the folder you want to clone in and use the following command: <br>
-git clone https://github.com/dhyani15/resnet-implementation.git <br>
+git clone https://github.com/MohitK29/compact-transformers.git <br>
   
 -------------------------------------------------------------------------------------------------------- 
-<h3> 3. How to test the code </h3>
-<h4> Method 1(To only test the trained model on cifar10 testset): Using ‘test.py’ (Saved parameters and weights) - Recommended </h4>
-(Make sure the file ‘project1_model.pt’ and ‘test.py’ are in the same folder) <br><br>
+<h3> 3. How to run the code </h3>
+
+<h4> Train the model: How to train the model using SLURM jobs on HPC <br><br>
 <li>Step 1: Create a conda environment <br>
 Check out the following link to do so:  <br>
 Managing environments — https://sites.google.com/a/nyu.edu/nyu-hpc/documentation/prince/packages/conda-environments <br><br>
 <li>Step 2: For installing requirements
 Run the following commands to set up the environment: <br><br>
 pip install -r requirements.txt <br><br>
-<li>Step 3. Run ‘test.py’ to display accuracy
-Run the python command: <br>
-python test.py <br><br>
-This program uses the saved model ‘project1_model.pt’ and displays the accuracy as a Tensor. <br><br>
-If you are planning to test our model using your own test script, make sure it has the following command<br>
-device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')<br>
-model = project1_model().to(device)<br>
-model_path = './project1_model.pt'<br>
-checkpoint = torch.load(model_path, map_location=device)<br>
-model = torch.nn.DataParallel(model)<br>
-model.load_state_dict(checkpoint, strict=False)<br>
---------------------------------------------------------------------------------------------------------  
-  <h4> Method 2(to train our model from scratch) : How to retrain the model using SLURM jobs on HPC </h4>
-<li>Make sure you have cloned this repo on your hpc and repeat step 1 & step 2 from Method 1 <br>
 <li>Step 3: Run the following SLURM command by running the following command ‘bestmodel.sbatch’: <br>
 sbatch bestmodel.sbatch <br><br>
 This command will create a .out file and two .png files one for training/test loss and one for accuracy. It will run 200 epochs for the model and will print both losses and accuracies for each epoch. <br>
 (Warning: This process takes approx. 45-60 mins for both training and testing combined). <br><br>
+--------------------------------------------------------------------------------------------------------  
+
+
 
   <h2>REFERENCES:</h2>
 <li>[1] Krizhevsky, Alex, Ilya Sutskever, and Geoffrey E. Hinton. ”Imagenet classification with deep convolutional
