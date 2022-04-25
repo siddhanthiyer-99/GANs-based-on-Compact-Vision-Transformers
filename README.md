@@ -42,7 +42,6 @@ pip install -r requirements.txt <br><br>
 sbatch bestmodel.sbatch <br><br>
 This command will create a .out file and two .png files one for training/test loss and one for accuracy. It will run 200 epochs for the model and will print both losses and accuracies for each epoch. <br>
 (Warning: This process takes approx. 45-60 mins for both training and testing combined). <br><br>
---------------------------------------------------------------------------------------------------------  
 
 
 
