@@ -47,22 +47,19 @@ This command will create a .out file and two .png files one for training/test lo
 
 
   <h2>REFERENCES:</h2>
-<li>[1] Krizhevsky, Alex, Ilya Sutskever, and Geoffrey E. Hinton. ”Imagenet classification with deep convolutional
-neural networks.” Advances in neural information processing systems 25 (2012).
-<li>[2] Simonyan, Karen, and Andrew Zisserman. ”Very deep convolutional networks for large-scale image recognition.” arXiv preprint arXiv:1409.1556 (2014).
-<li>[3] Szegedy, Christian, et al. ”Inception-v4, inception-resnet and the impact of residual connections on learning.” Thirty-first AAAI conference on artificial intelligence. 2017.
-<li>[4] He, Kaiming, et al. ”Deep residual learning for image recognition.” Proceedings of the IEEE conference on
-computer vision and pattern recognition. 2016.
-<li>[5] Tan, Mingxing, and Quoc Le. ”Efficientnet: Rethinking model scaling for convolutional neural networks.”
-International conference on machine learning. PMLR, 2019.
-<li>[6] Zagoruyko, Sergey, and Nikos Komodakis. ”Wide residual networks.” arXiv preprint arXiv:1605.07146
-(2016).
-<li>[7] Zhang, Michael, et al. ”Lookahead optimizer: k steps forward, 1 step back.” Advances in Neural Information Processing Systems 32 (2019).
-<li>[8] Krizhevsky, Alex, and Geoffrey Hinton. ”Learning multiple layers of features from tiny images.” (2009): 7.
-<li>[9] Shorten, C., Khoshgoftaar, T.M. A survey on Image Data Augmentation for Deep Learning. J Big Data 6,
-60 (2019). https://doi.org/10.1186/s40537-019-0197-0
-<li>[10] Bergstra, James, and Yoshua Bengio. ”Random search for hyper-parameter optimization.” Journal of
-machine learning research 13.2 (2012).
-<li>[11] Yu, Tong, and Hong Zhu. ”Hyper-parameter optimization: A review of algorithms and applications.” arXiv
-preprint arXiv:2003.05689 (2020).
-<li>[12] https://github.com/kuangliu/pytorch-cifar
+<li>[1] Y. LeCun, B. Boser, J. S. Denker, D. Henderson, R. E. Howard, W. Hubbard, and L. D. Jackel, “Backpropagation applied to handwritten zip code recognition,” Neural computation, vol. 1, no. 4, pp. 541–551, 1989.
+  
+<li>[2] A. Krizhevsky, I. Sutskever, and G. E. Hinton, “Imagenet classification with deep convolutional neural networks,” Advances in neural information processing systems, vol. 25, 2012.
+  
+<li>[3] K. He, X. Zhang, S. Ren, and J. Sun, “Identity mappings in deep residual networks,” in European conference on computer vision. Springer, 2016, pp. 630–645.
+  
+<li>[4] A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, Ł. Kaiser, and I. Polosukhin, “Attention is all you need,” Advances in neural information processing systems, vol. 30, 2017.
+  
+<li>[5] A. Kolesnikov, A. Dosovitskiy, D. Weissenborn, G. Heigold, J. Uszkoreit, L. Beyer, M. Minderer, M. Dehghani, N. Houlsby, S. Gelly et al., “An image is worth 16x16 words: Transformers for image recognition at scale,” 2021.
+  
+<li>[6]  K. Lee, H. Chang, L. Jiang, H. Zhang, Z. Tu, and C. Liu, “Vitgan: Training gans with vision transformers,” arXiv preprint arXiv:2107.04589, 2021.
+
+<li>[7] A. Hassani, S. Walton, N. Shah, A. Abuduweili, J. Li, and H. Shi, “Escaping the big data paradigm with compact transformers,” arXiv preprint arXiv:2104.05704, 2021.
+  
+<li>[8] “Compact vision transformer gans,” https://github.com/SHI-Labs/Compact-Transformers.
+  
