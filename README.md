@@ -2,7 +2,7 @@
 
 <h3> <u> OVERVIEW: </u> </h3>
 
-![architecture]![image](https://user-images.githubusercontent.com/47019139/165015370-92c33f6a-f458-4e96-844d-afb9406de9f7.png)
+![image](https://user-images.githubusercontent.com/47019139/165015370-92c33f6a-f458-4e96-844d-afb9406de9f7.png)
 
 
 -------------------------------------------------------------------------------------------------------- 
